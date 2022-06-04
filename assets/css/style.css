@@ -1,0 +1,302 @@
+/* 
+    Code by Minato Nankaji
+    Contact : 
+    - Facebook : https://www.facebook.com/Minato.Nankaji/
+    - Discord : 港 なんかじ#0001
+    Website : https://tokovn.com
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Baloo 2', cursive;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #0069d9;
+}
+
+body {
+    background-image: var(--data-bg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.content {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    padding: 1rem;
+    overflow: auto;
+}
+
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+}
+
+.card-user {
+    padding: 1rem 1.5rem;
+    background-color: #fff;
+    width: 600px;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 25px 5px rgba(0,0,0,0.3);
+}
+
+.card-user .card-avatar {
+    height: 200px;
+    width: 200px;
+    background-image: var(--data-bg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    position: relative;
+    margin-top: -5rem;
+    box-shadow: 0 0 35px 5px rgba(0,0,0,0.3);
+}
+
+.card-user .card-content {
+    margin-top: 0.5rem;
+}
+
+.card-user .card-title {
+    text-align: center;
+    font-size: 40px;
+    pointer-events: none;
+}
+
+.card-user .card-title .card-span-regular {
+    font-weight: 500;
+}
+
+.card-user .card-text {
+    text-align: center;
+    font-size: 18px;
+    pointer-events: none;
+}
+
+.card-user .card-mg {
+    margin-top: 1.5rem;
+}
+
+.card-user .card-divider {
+    width: 100%;
+    height: 1px;
+    background-color: #ededed;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-user .card-mxh {
+    text-align: center;
+    font-weight: 500;
+}
+
+.card-user .card-button {
+    padding: 1.5rem 2rem;
+    font-size: 17px;
+    border: 1px solid #f6f5f5;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    background-color: #fff;
+    transition: border 0.3s, box-shadow 0.15s, background-color 0.3s;
+}
+
+.card-user .card-button:hover {
+    background-color: rgb(237, 237, 237);
+    border: 1px solid rgb(237, 237, 237);
+}
+
+.card-user .card-button:focus {
+    border: 1px solid transparent;
+    box-shadow: 0 0 15px 3px rgba(0,0,0,0.3);
+}
+
+.card-user .card-button .icon {
+    display: block;
+}
+
+.card-user .card-button .txt {
+    position: relative;
+    top: 0.25rem;
+}
+
+.card-user .card-button.focused {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.card-user .flex-center .card-button {
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+}
+
+.card-user .card-button.card-button-mxh {
+    padding: 0.5rem 1rem;
+    color: #000;
+}
+
+.card-user .card-button.card-button-mxh.facebook {
+    border: 1px solid #007bff;
+    background-color: #007bff;
+    color: #fff;
+}
+
+.card-user .card-button.card-button-mxh.youtube {
+    border: 1px solid #dc3545;
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.card-user .card-button.card-button-mxh.github {
+    border: 1px solid #343a40;
+    background-color: #343a40;
+    color: #fff;
+}
+
+.card-user .card-button.card-button-mxh.twitter {
+    border: 1px solid #17a2b8;
+    background-color: #17a2b8;
+    color: #fff;
+}
+
+.card-user .card-button.card-button-mxh.discord {
+    border: 1px solid #6610f2;
+    background-color: #6610f2;
+    color: #fff;
+}
+
+.card-user .card-button.card-button-mxh.facebook:hover {
+    border: 1px solid #0062cc;
+    background-color: #0069d9;
+}
+
+.card-user .card-button.card-button-mxh.youtube:hover {
+    border: 1px solid #bd2130;
+    background-color: #c82333;
+}
+
+.card-user .card-button.card-button-mxh.github:hover {
+    border: 1px solid #1d2124;
+    background-color: #23272b;
+}
+
+.card-user .card-button.card-button-mxh.twitter:hover {
+    border: 1px solid #117a8b;
+    background-color: #138496;
+}
+
+.card-user .card-button.card-button-mxh.discord:hover {
+    border: 1px solid #6f42c1;
+    background-color: #6f42c1;
+}
+
+.card-user .card-button.card-button-mxh .icon-mxh {
+    margin-top: 0.4rem;
+}
+
+.toggle-content {
+    padding: 0;
+    max-height: 0;
+    overflow: auto;
+    transition: max-height 0.3s;
+}
+
+.toggle-content.focused {
+    padding: 1rem;
+    max-height: 1080px;
+    transition: max-height 0.3s;
+}
+
+.card-user .toggle-content .card-text.toggle-text {
+    display: none;
+}
+
+.card-user .toggle-content.focused .card-text.toggle-text {
+    display: block;
+    text-align: left;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0,0,0,0.4);
+}
+
+@media (max-width:650px) {
+    .card-user {
+        width: 100%;
+    }
+    .card-user .flex-center.card-button-center:not(.card-button-center-mxh) {
+        display: block;
+    }
+    .card-user .card-button:not(.card-button-mxh) {
+        width: 100%;
+    }
+}
+
+#overlay{
+    position: fixed;
+    top: 0; bottom: 0;
+    left: 0; right: 0;
+    background: rgba(1,1,1,.7);
+    z-index: 9999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 4px;
+}
+.overlay-text{
+    color: white;
+    font-weight: bold;
+    font-size: 34px;
+}
+#overlay .overlay-text:nth-child(1){
+    animation: loading 1.4s linear infinite backwards;
+}
+#overlay .overlay-text:nth-child(2){
+    animation: loading 1.4s .1s linear infinite backwards;
+}
+#overlay .overlay-text:nth-child(3){
+    animation: loading 1.4s .2s linear infinite backwards;
+}
+#overlay .overlay-text:nth-child(4){
+    animation: loading 1.4s .3s linear infinite backwards;
+}
+#overlay .overlay-text:nth-child(5){
+    animation: loading 1.4s .4s linear infinite backwards;
+}
+#overlay .overlay-text:nth-child(6){
+    animation: loading 1.4s .5s linear infinite backwards;
+}
+#overlay .overlay-text:nth-child(7){
+    animation: loading 1.4s .6s linear infinite backwards;
+}
+@keyframes loading {
+    0%{opacity: 0;}
+    40%{opacity: 1}
+    100%{opacity: 0}
+}
