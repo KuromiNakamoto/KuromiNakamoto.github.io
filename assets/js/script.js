@@ -7,7 +7,7 @@
 */
 
 // change it to true if you have project find api
-var projectfind = false;
+var projectfind = true;
 
 $(document).ready(function () {
     $('#loadSnow').html(`
