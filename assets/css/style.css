@@ -12,7 +12,7 @@ a {
 }
 
 body {
-    background-image: linear-gradient(to right, rgb(66, 66, 231), rgb(18, 195, 48));
+    background-image: linear-gradient(to right, rgb(66, 66, 231), #9d38f5);
     background-size: cover;
     background-attachment: fixed;
 }
@@ -37,8 +37,9 @@ body {
     height: 230px;
     background-image: var(--data-image);
     background-size: cover;
+    background-position: center;
     border-radius: 50%;
-    box-shadow: inset 0 0 0 10px rgba(27, 27, 225, 0.5), inset 5px 10px 0 10px rgba(27, 225, 106, 0.5);
+    box-shadow: inset 0 0 0 10px rgba(27, 27, 225, 0.5), inset 5px 10px 0 10px #9d38f5a1;
     margin: auto;
     margin-top: -8%;
     transition: box-shadow .2s;
@@ -46,7 +47,7 @@ body {
 }
 
 .card-wrapper .card-element .card-avatar:hover {
-    box-shadow: inset 0 0 0 10px rgba(27, 27, 225, 0.5), inset -5px -10px 0 10px rgba(27, 225, 106, 0.5);
+    box-shadow: inset 0 0 0 10px rgba(27, 27, 225, 0.5), inset -5px -10px 0 10px #9d38f5a1;
 }
 
 .card-wrapper .card-element h1.card-username {
@@ -56,7 +57,7 @@ body {
     font-weight: 700;
     font-size: 40px;
     background-clip: text;
-    background-image: linear-gradient(to right, rgb(66, 66, 231), rgb(18, 195, 48));
+    background-image: linear-gradient(to right, rgb(66, 66, 231), #9d38f5);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -146,7 +147,7 @@ body {
     font-size: 18px;
     border-radius: 2rem;
     color: #fff;
-    background-image: linear-gradient(to right, rgb(66, 66, 231), rgb(18, 195, 48));
+    background-image: linear-gradient(to right, rgb(66, 66, 231), #9d38f5);
     background-size: 130%;
     background-position: left;
     transition: background-position .3s;
